@@ -14,22 +14,22 @@ let resultado;
 switch (operacion) {
     case 'suma': 
         resultado = suma(numeroA, numeroB)
-        break;
+        return resultado;
     case 'resta': 
         resultado = resta(numeroA, numeroB)
-        break;
+        return resultado;
     case 'multiplicacion':
         resultado = multiplicacion(numeroA, numeroB)
-        break;
+        return resultado;
     case 'division':
         resultado = division(numeroA, numeroB)
-        break;
+        return resultado;
         case 'potencia':
         resultado = potencia(numeroA, numeroB)
-        break;
+        return resultado;
     default :
         resultado = 'No se encuentra la operacion solicitada'
-        break;
+        return resultado;
 };
 
 
