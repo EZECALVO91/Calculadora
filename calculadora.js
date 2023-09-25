@@ -38,5 +38,11 @@ switch (operacion) {
         return JSON.parse(archivo);
     }
     
+    function EscribirJson(registro) {
+        let archivo = LeerJson();
+        archivo.push(registro);
+        fs.writeFileSync(path, JSON.stringify(archivo));
+    }
 
-
+    const resultado = calculadora(operacion, numeroA, numeroB);
+    console.log(resultado);
