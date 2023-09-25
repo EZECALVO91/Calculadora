@@ -7,9 +7,9 @@ const potencia = require('./operaciones/potencia');
 const {argv} = process
 
 let operacion = argv[2]
-let numeroA = argv[3];
-let numeroB = argv[4];
-let resultado;
+let numeroA = +argv[3];
+let numeroB = +argv[4];
+const path = __dirname + "\registro.json";
 
 switch (operacion) {
     case 'suma': 
