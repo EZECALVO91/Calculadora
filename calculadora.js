@@ -9,7 +9,7 @@ const {argv} = process
 let operacion = argv[2]
 let numeroA = +argv[3];
 let numeroB = +argv[4];
-const path = __dirname + "\registro.json";
+const path = __dirname + "\\registro.json";
 
 switch (operacion) {
     case 'suma': 
@@ -25,13 +25,18 @@ switch (operacion) {
         resultado = division(numeroA, numeroB)
         break;
     case 'potencia':
-         resultado = potencia(numeroA, numeroB)
+        resultado = potencia(numeroA, numeroB)
         break;
     default:
         resultado = 'No se encuentra la operación solicitada'
     }
     EscribirJson({ operacion: operacion, resultado: resultado });
     return { operacion: operacion, resultado: resultado };
+
+    function LeerJson() {
+        let archivo = fs.readFileSync(path, "utf-8");
+        return JSON.parse(archivo);
+    }
     
 
 
