@@ -23,13 +23,15 @@ switch (operacion) {
         return resultado;
     case 'division':
         resultado = division(numeroA, numeroB)
-        return resultado;
-        case 'potencia':
-        resultado = potencia(numeroA, numeroB)
-        return resultado;
-    default :
-        resultado = 'No se encuentra la operacion solicitada'
-        return resultado;
-};
+        break;
+    case 'potencia':
+         resultado = potencia(numeroA, numeroB)
+        break;
+    default:
+        resultado = 'No se encuentra la operación solicitada'
+    }
+    EscribirJson({ operacion: operacion, resultado: resultado });
+    return { operacion: operacion, resultado: resultado };
+    
 
 
